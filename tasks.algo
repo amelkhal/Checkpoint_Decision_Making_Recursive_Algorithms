@@ -1,0 +1,79 @@
+// Leap Year Checker
+function isLeapYear(year) {
+    if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+// Ticket Pricing
+function ticketPrice(age) {
+    let price;
+    if (age <= 12) {
+        price = 10;
+    } else if (age >= 13 && age <= 17) {
+        price = 15;
+    } else {
+        price = 20;
+    }
+    return price;
+}
+
+// Weather Clothing Adviser
+function clothingAdviser(temperature, isRaining) {
+    if (temperature < 10) {
+        return "It's cold. Wear a heavy coat and a scarf.";
+    } else if (temperature >= 10 && temperature < 20) {
+        if (isRaining) {
+            return "It's cool and raining. Wear a jacket and carry an umbrella.";
+        } else {
+            return "It's cool. Wear a light jacket.";
+        }
+    } else {
+        if (isRaining) {
+            return "It's warm but raining. Wear a raincoat.";
+        } else {
+            return "It's warm. Wear light clothing.";
+        }
+    }
+}
+
+// Fibonacci Sequence
+function fibonacci(n) {
+    if (n <= 1) {
+        return n;
+    } else {
+        return fibonacci(n - 1) + fibonacci(n - 2);
+    }
+}
+
+// Palindrome Checker
+function isPalindrome(str) {
+    str = str.replace(/[^\w]/g, '').toLowerCase();
+    if (str.length <= 1) {
+        return true;
+    }
+    if (str[0] !== str[str.length - 1]) {
+        return false;
+    }
+    return isPalindrome(str.slice(1, -1));
+}
+
+// Power Function
+function power(base, exponent) {
+    if (exponent === 0) {
+        return 1;
+    } else {
+        return base * power(base, exponent - 1);
+    }
+}
+
+// Factorial Function
+function factorial(n) {
+    if (n === 0) {
+        return 1;
+    } else {
+        return n * factorial(n - 1);
+    }
+}
